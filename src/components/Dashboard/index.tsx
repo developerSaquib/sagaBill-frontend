@@ -154,7 +154,7 @@ export default function Dashboard(): JSX.Element {
               </CardContent>
               <CardFooter className="flex-col gap-2 text-sm">
                 <div className="flex items-center gap-2 font-medium leading-none">
-                  Best performer <b>{chartData?.topArtist[0]?.artist}</b>
+                  Best Performers <b>{chartData?.topArtist[0]?.artist}</b>
                   <Trophy className="h-4 w-4" />
                 </div>
                 <div className="leading-none text-muted-foreground">
@@ -166,7 +166,7 @@ export default function Dashboard(): JSX.Element {
           <div className="basis-1/3">
             <Card className="flex flex-col">
               <CardHeader className="items-center pb-0">
-                <CardTitle> Top 5 best selling items in this Month</CardTitle>
+                <CardTitle> Top 5 best Selling items in this Month</CardTitle>
                 <CardDescription>
                   {startOfMonth.toLocaleDateString()} -
                   {now.toLocaleDateString()}
@@ -224,7 +224,7 @@ export default function Dashboard(): JSX.Element {
               </CardContent>
               <CardFooter className="flex-col gap-2 text-sm">
                 <div className="flex items-center gap-2 font-medium leading-none">
-                  Best Saling Item <b>{chartData?.topItems[0]?.item}</b>
+                  Best Selling Items <b>{chartData?.topItems[0]?.item}</b>
                   <BadgeIndianRupee className="h-4 w-4" />
                 </div>
                 <div className="leading-none text-muted-foreground">
