@@ -11,7 +11,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { z } from "zod";
 import makeUpIcon from "../../../assets/makeUp.png";
 import { useState } from "react";
-
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 const LoginPage = () => {
   const loginSchema = z.object({
     userName: z.string({ message: "Username is required." }),
@@ -27,6 +28,7 @@ const LoginPage = () => {
 
   const [buttonLoader, setButtonLoader] = useState<boolean>(false);
   const [buttonDisable, setButtonDisable] = useState<boolean>(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSignIn = async (data: any) => {
     try {
@@ -123,13 +125,24 @@ const LoginPage = () => {
                 <LockIcon className="mr-2 text-gray-600" size={18} />
                 <Input
                   id="password"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   className="outline-none border-none outline-none focus:ring-0 flex-grow px-2 py-2 text-base placeholder:text-sm"
                   placeholder="Enter your password"
                   onChange={(e) => {
                     setValue("password", e.target.value);
                   }}
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="text-gray-600 focus:outline-none"
+                >
+                  {showPassword ? (
+                    <FaEyeSlash size={18} />
+                  ) : (
+                    <FaEye size={18} />
+                  )}
+                </button>
               </div>
               {errors.password ? (
                 <p className="text-sm text-red-600 mt-1">
