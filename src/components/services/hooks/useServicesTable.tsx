@@ -118,7 +118,7 @@ const useServicesTable = () => {
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
         >
-          Status
+          Is InActive
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       ),
@@ -192,7 +192,7 @@ const useServicesTable = () => {
         item.birthdateUpdated = `${day}/${month}/${year}`;
         //Status in Active/Not Active
         item.isInactiveUpdated =
-          item.isInactive === 1 ? "Active" : "Not Active";
+          item.isInactive === 1 ? "Yes" : "No";
         return item;
       });
       setTableData(response);

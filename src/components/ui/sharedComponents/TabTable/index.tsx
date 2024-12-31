@@ -268,7 +268,6 @@ function Form({
     curr: number,
     id: number | string
   ): void => {
-    console.log(prev);
     const _newData: SaleTabInterface = {
       ...prev,
       discountAmount:
@@ -307,7 +306,7 @@ function Form({
           ? Number(curr * prev.quantity * (prev.tax.percentage / 100))
           : Number(prev.rate * prev.quantity * (prev.tax.percentage / 100)),
     };
-    console.log("akshay", _newData.amount / _newData.quantity);
+
     setRowData(_newData);
     updateGrandTotal(item, curr, "rate");
     handlFormFieldStateUpdate(_newData, item.id);

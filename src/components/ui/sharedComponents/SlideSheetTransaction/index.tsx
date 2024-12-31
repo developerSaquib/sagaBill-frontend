@@ -1,3 +1,5 @@
+/* eslint-disable no-empty */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unsafe-function-type */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from "@/components/ui/button";

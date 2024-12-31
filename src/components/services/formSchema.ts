@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const formSchema = {
   menuId: 16,
   postUrl: "/services",
@@ -46,7 +48,6 @@ export const formSchema = {
       reflectedFrom: "taxPerc",
       reflectTo: "taxAmount",
       cb: (amount?: any, taxValue?: any, ..._rest: any[]) => {
-        console.log(amount, taxValue);
         return (amount * taxValue) / 100;
       },
     },
@@ -69,11 +70,11 @@ export const formSchema = {
       validations: [],
     },
     {
-      label: "Status",
+      label: "Is InActive",
       name: "isInactive",
       type: "checkbox",
       required: false,
-      defaultValue: true,
+      defaultValue: false,
       error: "",
       validations: [],
     },

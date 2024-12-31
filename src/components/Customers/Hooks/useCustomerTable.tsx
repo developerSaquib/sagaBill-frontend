@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ColumnDef } from "@tanstack/react-table";
 import { MoreHorizontal, ArrowUpDown } from "lucide-react";
@@ -130,7 +131,7 @@ const useCustomerTable = () => {
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
         >
-          Status
+          Is Inactive
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       ),
@@ -220,7 +221,7 @@ const useCustomerTable = () => {
         item.birthdateUpdated = `${day}/${month}/${year}`;
         //Status in Active/Not Active
         item.isInactiveUpdated =
-          item.isInactive === 1 ? "Active" : "Not Active";
+          item.isInactive === 1 ? "Yes" : "No";
         return item;
       });
       setTableData(response);
@@ -276,6 +277,9 @@ const useCustomerTable = () => {
             {
               name: "country",
             },
+            {
+              name: "contactType",
+            }
           ],
         };
         response = await getDataById(formSchema.postUrl, recordId, apiFilter);
