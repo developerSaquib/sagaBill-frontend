@@ -14,10 +14,8 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
-// import { MdAdminPanelSettings } from "react-icons/md";
-// import { MdDashboard } from "react-icons/md";
-// import { GrServices } from "react-icons/gr";
-import JhLogo from "@/assets/jh_logo.png";
+import SagaBlackLogo from "@/assets/saga_black_logo.png";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -39,36 +37,6 @@ interface MenuItem {
   icon?: React.ComponentType<{ size?: number }>; // Optional icon type
   subItems: { title: string; url: string }[];
 }
-
-// Main menu items with icons
-// const mainMenuItems: MenuItem[] = [
-//   {
-//     title: "Dashboard",
-//     url: "#",
-//     icon: MdDashboard,
-//     subItems: [{ title: "Sale Insights", url: `${AppRoutes.DASHBOARD}` }],
-//   },
-//   {
-//     title: "Admin",
-//     url: "#",
-//     icon: MdAdminPanelSettings,
-//     subItems: [
-//       { title: "Customers", url: `${AppRoutes.CUSTOMER}` },
-//       { title: "Service Session", url: `${AppRoutes.SERVICESESSIONS}` },
-//       { title: "Products", url: `${AppRoutes.PRODUCTS}` },
-//     ],
-//   },
-//   {
-//     title: "Services",
-//     url: "#",
-//     icon: GrServices,
-//     subItems: [
-//       { title: "Hair Cut", url: "#annual" },
-//       { title: "Face Clean Up", url: "#monthly" },
-//       { title: "Face Massage", url: "#weekly" },
-//     ],
-//   },
-// ];
 
 export function AppSidebar() {
   const [mainMenuItems, setMainMenuItems] = useState<MenuItem[]>([]);
@@ -106,17 +74,8 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent className="flex flex-col h-full">
         <SidebarGroup>
-          {/* <SidebarGroupLabel
-            className="text-lg font-bold mb-6 mt-2"
-            style={{
-              fontFamily: "'Edu AU VIC WA NT Pre', sans-serif",
-              color: "var(--color-primary)",
-            }}
-          >
-            JH Hair & Beauty Studio
-          </SidebarGroupLabel> */}
           <SidebarGroupLabel className="mb-5 mt-5">
-            <img src={JhLogo} alt="Logo" className="img-fluid" />
+            <img src={SagaBlackLogo} alt="Logo" className="img-fluid" width={"35%"} />
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>

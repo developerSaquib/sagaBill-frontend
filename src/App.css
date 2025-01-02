@@ -3,8 +3,8 @@
 
 /* Colors */
 :root {
-    /* --color-primary: #4b0082; */
-    --color-primary: #ed1b24;
+    --color-primary: #4b0082;
+    /* --color-primary: #ed1b24; */
   }
 
   input::-webkit-outer-spin-button,

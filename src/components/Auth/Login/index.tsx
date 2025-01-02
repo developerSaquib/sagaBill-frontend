@@ -9,10 +9,11 @@ import { LockIcon, UserIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { z } from "zod";
-import makeUpIcon from "../../../assets/makeUp.png";
+import whiteLogoSaga from "@/assets/saga_logo_white.png";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+
 const LoginPage = () => {
   const loginSchema = z.object({
     userName: z.string({ message: "Username is required." }),
@@ -61,13 +62,13 @@ const LoginPage = () => {
           style={{ backgroundColor: "var(--color-primary)" }}
         >
           <div className="flex flex-col items-center">
-            <img src={makeUpIcon} alt="makeUpIcon" />
+            <img src={whiteLogoSaga} alt="Billing Icon" width={"40%"} />
             {/* Title and Tagline */}
-            <h1 className="font-serif text-base md:text-lg font-semibold mb-2 mt-2 uppercase">
-              JH Hair & Beauty Studio
-            </h1>
-            <p className="font-mono text-center text-md md:text-sm mb-4 uppercase">
-              We make you shine like a star
+            {/* <h1 className="font-serif text-base md:text-lg font-semibold mb-2 mt-2 uppercase">
+              SAGA BILL PRO
+            </h1> */}
+            <p className="font-mono text-center text-sm md:text-sm mb-4 mt-4 uppercase">
+              Streamlined Accounts, Growth Assured
             </p>
           </div>
         </div>
